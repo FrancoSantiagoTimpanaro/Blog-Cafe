@@ -5,7 +5,8 @@
     --cafe: #784D3C;
     --blanco: #ffffff;
     --negro: #000000;
-    --claro: #e1e1e1
+    --claro: #e1e1e1;
+    --crema: #e6d070;
 }
 
 html{
@@ -27,13 +28,10 @@ body{
 }
 
 /*GLOBALES*/
-
 .contenedor{
     display: flex;
     flex-direction: column;
     max-width: 120rem;
-    width: 90%;
-    margin: 0 auto;
 }
 
 .img-centrada{
@@ -114,6 +112,7 @@ img{
 .header__texto{
     color: var(--blanco);
     margin-top: 5rem;
+    transition: transform 0.5s;
 }
 
 @media (min-width: 769px) { 
@@ -148,15 +147,81 @@ img{
     color: var(--blanco);
     margin-right: 1rem;
 }
-.navegacion a:hover{
+.nav-bar a:hover{
     color: var(--cafe);
+}
+.ham{
+    float: right;
+    height: 25px;
+    width: 40px;
+    margin-bottom: .4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.linea{
+    height: 3px;
+    width: 30px;
+    background-color: var(--blanco);
+}
+@media (max-width: 768px) { 
+    .nav-bg{
+        display: flex;
+        position: absolute;
+        width: 100%;
+        margin-top: 1.5rem;
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-bar{
+        display: flex;
+        flex-direction: column;
+        display: none;
+        margin-left: auto;
+        margin-right: auto;
+        height: auto;
+        width: 103%;
+        background-color: var(--cafe);
+        margin-top: .3rem;
+    }
+    .activo{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .barra{
+        background-color: var(--cafe);
+        opacity: 80%;
+        width: 100%;
+    }
+    .desplazarVertical{
+        transition: transform 0.5s;
+        transform: translateY(3rem);
+    }
+    .ham{
+        width: 100%;
+        align-items: center;
+    }
+    .nav-bar a:hover{
+        color: var(--crema);
+    }
 }
 
 @media (min-width: 769px) { 
-    .navegacion{
+    .nav-bar{
         display: flex;
         gap: 2rem;
     }
+    .ham{
+        display: none;
+    }
+}
+
+.horizontal{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 /* CONTENDIO PRINCIPAL */
@@ -219,12 +284,12 @@ img{
 }
 
 .widget-cursos{
-    border-bottom: 1px solid var(--claro);
+    /* border-bottom: 1px solid var(--claro); */
     margin: 2rem;
 }
 .widget-cursos:last-of-type{
     border-bottom: none;
-    margin-bottom: 0;
+    margin-bottom: 3rem;
 }
 
 .widget-curso__label{
