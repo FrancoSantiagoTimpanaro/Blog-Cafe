@@ -31,7 +31,9 @@ body{
 .contenedor{
     display: flex;
     flex-direction: column;
-    max-width: 120rem;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .img-centrada{
@@ -125,7 +127,6 @@ img{
         margin-top: 15rem;
     }
 }
-
 
 .logo{
     color: var(--blanco);
@@ -225,6 +226,11 @@ img{
 }
 
 /* CONTENDIO PRINCIPAL */
+.blog{
+    display: flex;
+    flex-direction: column;
+    
+}
 @media (min-width: 769px) { 
     .contenido-principal{
         display: grid;
@@ -309,7 +315,8 @@ img{
     align-items: center;
     justify-content: center;
     background-color: var(--negro);
-    height: 20rem;
+    height: 4rem;
+    color: var(--blanco);
 
 }
 
