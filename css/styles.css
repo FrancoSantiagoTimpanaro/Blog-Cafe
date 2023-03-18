@@ -103,6 +103,30 @@ img{
 }
 
 /* HEADER */
+.navbar{
+    padding: 0;
+    width: 100%;
+    padding: 1rem;
+}
+.container-fluid{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+.container-fluid a{
+    color: white;
+}
+.container-fluid a:hover{
+    color: wheat;
+}
+.navbar-toggler{
+    border: 0px;
+}
+.navbar-toggler-icon{
+    border-radius: 5px;
+    color: white;
+    background-color: white;
+}
 .header{
     background-image: url(../img/banner.jpg);
     height: 60rem;
@@ -117,12 +141,12 @@ img{
     transition: transform 0.5s;
 }
 
-@media (min-width: 769px) { 
-    .barra{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+@media (max-width: 768px) { 
+    .navbar-brand h1{
+        font-size: 3rem;
     }
+}
+@media (min-width: 769px) { 
     .header__texto{
         margin-top: 15rem;
     }
@@ -312,37 +336,42 @@ img{
 /* FOOTER */
 .footer{
     display: flex;
+    background-color: black;
+    color: white;
     align-items: center;
+<<<<<<< Updated upstream
     justify-content: center;
     background-color: var(--negro);
     height: 4rem;
     color: var(--blanco);
 
+=======
+    justify-content: space-around;
+    height: 60px;
+>>>>>>> Stashed changes
+}
+.footer p{
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 15px;
+}
+.sector-contacto{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* SOBRE NOSOTROS */
-@media (min-width: 769px) { 
-    .sobre-nosotros{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        align-items: center;
-        column-gap: .5rem;
+
+@media (max-width: 768px) { 
+    .footer{
+        height: fit-content;
+        flex-direction: column;
+        text-align: center;
     }
-    .sobre-nosotros__texto{
-        font-size: 2rem;
+    .sector-contacto{
+        width: 60%;
     }
 }
-
-/* CURSOS */
-@media (min-width: 769px) { 
-    .curso{
-        display: grid;
-        grid-template-columns: 1fr 3fr;
-        column-gap: 3rem;
-        margin-bottom: 6rem;
-    }
-}
-
 
 /* CONTACTO */
 .contacto-bg{
